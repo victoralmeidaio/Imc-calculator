@@ -8,6 +8,8 @@ const data = [
         obesity: "0",
     },
     {
+
+
         min: 18.5,
         max: 24.9,
         classification: "Entre 18,5 e 24,9",
@@ -53,7 +55,7 @@ const resultContainer = document.querySelector("#result-container");
 const imcNumber = document.querySelector("#imc-number span");
 const imcInfo = document.querySelector("#imc-info span");
 const ageinfo = document.querySelector("#age-info span")
-const nameinfo= document.querySelector("#name-info span")
+const nameinfo = document.querySelector("#name-info span")
 
 const backBtn = document.querySelector("#back-btn");
 
@@ -110,7 +112,7 @@ calcBtn.addEventListener("click", (e) => {
 
     console.log(weight, height);
 
-    if (!weight || !height ) return;
+    if (!weight || !height) return;
 
     const imc = calcImc(height, weight);
     let info;
@@ -125,8 +127,9 @@ calcBtn.addEventListener("click", (e) => {
 
     imcNumber.innerText = imc;
     imcInfo.innerText = info;
-    ageinfo.innerText = ageinput;
-    nameinfo.innerText = nameinput;
+    ageinfo.innerText = ageinput.value; //revisar
+    nameinfo.innerText = nameinput.value; //revisar
+
     switch (info) {
         case "Magreza":
             imcNumber.classList.add("low");

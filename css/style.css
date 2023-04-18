@@ -1,156 +1,198 @@
 * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    font-family: "Lato", sans-serif;
-  }
-  
-  body {
-    background-color: #444;
-    
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    min-height: 100vh;
-    color: #fff;
-  }
-  
-  .hide {
-    display: none !important;
-  }
-  
-  .container {
-    min-width: 400px;
-    min-height: 400px;
-    padding: 2rem;
-  }
-  
-  /* IMC Form */
-  #calc-container h2 {
-    text-align: center;
-    margin-bottom: 2rem;
-  }
-  
-  .form-inputs {
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-  }
-  
-  .form-control {
-    display: flex;
-    flex: 1;
-    flex-direction: column;
-    margin-bottom: 1rem;
-  }
-  
-  .form-control label {
-    font-weight: bold;
-    margin-bottom: 0.6rem;
-    color: #ccc;
-  }
-  
-  .form-control input {
-    padding: 1rem 0.5rem;
-  }
-  
-  .action-control {
-    display: flex;
-    justify-content: space-between;
-    margin-top: 2rem;
-    gap: 1rem;
-  }
-  
-  button {
-    text-transform: uppercase;
-    padding: 1rem 1.5rem;
-    background-color: #f44236;
-    border: none;
-    color: #fff;
-    cursor: pointer;
-    opacity: 0.9;
-    flex: 1;
-  }
-  
-  button:hover {
-    opacity: 1;
-  }
-  
-  #clear-btn {
-    background-color: #444;
-  }
-  
-  /* Table */
-  #result-container {
-    text-align: center;
-  }
-  
-  #imc-number {
-    font-size: 2.4rem;
-    margin-bottom: 0.6rem;
-  }
-  
-  #imc-info {
-    font-size: 1.4rem;
-    color: #ccc;
-  }
-  
-  #result-container h3 {
-    margin-top: 1rem;
-    color: #dfdfdf;
-  }
-  
-  #result-container {
-    display: flex;
-    flex-direction: column;
-  }
-  
-  #imc-table {
-    margin: 1.5rem 0;
-    font-size: 0.8rem;
-  }
-  
-  .table-header {
-    font-weight: bold;
-    color: #ccc;
-  }
-  
-  .table-header,
-  .table-data {
-    display: flex;
-    justify-content: space-between;
-    margin-bottom: 0.5rem;
-    padding-bottom: 0.5rem;
-    border-bottom: 1px solid #444;
-    text-align: center;
-  }
-  
-  .table-header h4,
-  .table-data p {
-    flex: 1;
-  }
-  
-  .table-header h4:nth-child(3),
-  .table-data p:nth-child(3) {
-    max-width: 80px;
-  }
-  
-  #back-btn {
-    align-self: center;
-  }
-  
-  .good {
-    color: #12db34;
-  }
-  
-  .low {
-    color: #dbce12;
-  }
-  
-  .medium {
-    color: #db6212;
-  }
-  
-  .high {
-    color: #db1912;
-  }
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Lato", sans-serif;
+}
+
+body {
+  background-image: url(/img/pexels-sohail-nachiti-807598.jpg);
+  background-position: center;
+  background-size: cover;
+  background-repeat: repeat;
+  backdrop-filter: blur(3.5px);
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  color: #fff;
+}
+
+.hide {
+  display: none !important;
+}
+
+.container {
+  min-width: 400px;
+  min-height: 400px;
+  padding: 2rem;
+  background: rgba(217, 217, 217, 0.24);
+  backdrop-filter: blur(2.5px);
+  border-radius: 2em;
+}
+
+/* IMC Form */
+#calc-container h2 {
+  text-align: center;
+  margin-bottom: 2rem;
+  color: #fff;
+}
+
+
+.form-inputs {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+
+
+}
+
+.form-control {
+  display: flex;
+  flex: 1;
+  flex-direction: column;
+  margin-bottom: 1rem;
+  position: relative;
+}
+
+.form-control label {
+  font-weight: bold;
+  color: #ffffff;
+  position: absolute;
+  bottom: 10%;
+  transition: all 0.5s ease-in-out;
+}
+
+
+.form-control input {
+  padding: 1rem 0.5rem;
+  background-color: transparent;
+  border-style: none;
+  border-bottom: 1px solid #ccc;
+  color: white;
+  outline: 0;
+  transition: border-color 0.2s;
+
+}
+
+input:focus {
+  outline: none;
+  color: white;
+
+}
+
+.action-control {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 2rem;
+  gap: 1rem;
+}
+
+::placeholder {
+  color: transparent;
+
+}
+
+button {
+  text-transform: uppercase;
+  padding: 1rem 1.5rem;
+  background-color: #005a44;
+  border: none;
+  color: #fff;
+  cursor: pointer;
+  opacity: 0.9;
+  flex: 1;
+  border-radius: 2em;
+}
+
+button:hover {
+  opacity: 1;
+}
+
+#clear-btn {
+  background-color: rgb(250, 91, 91);
+}
+
+/* Table */
+#result-container {
+  text-align: center;
+}
+
+#imc-number {
+  font-size: 2.4rem;
+  margin-bottom: 0.6rem;
+}
+
+#imc-info {
+  font-size: 1.4rem;
+  color: #fff;
+}
+#name-info{
+  font-size: 2em;
+  margin-bottom: 0.2em;
+}
+#age-info{
+  font-size: 1.6em;
+  margin-bottom: 0.5em;
+}
+
+#result-container h3 {
+  margin-top: 1rem;
+  color: #dfdfdf;
+}
+
+#result-container {
+  display: flex;
+  flex-direction: column;
+}
+
+#imc-table {
+  margin: 1.5rem 0;
+  font-size: 0.8rem;
+}
+
+.table-header {
+  font-weight: bold;
+  color: #fff;
+}
+
+.table-header,
+.table-data {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 0.5rem;
+  padding-bottom: 0.5rem;
+  border-bottom: 1px solid #ffffff;
+  text-align: center;
+}
+
+.table-header h4,
+.table-data p {
+  flex: 1;
+}
+
+.table-header h4:nth-child(3),
+.table-data p:nth-child(3) {
+  max-width: 80px;
+}
+
+#back-btn {
+  align-self: center;
+}
+
+.good {
+  color: #12db34;
+}
+
+.low {
+  color: #dbce12;
+}
+
+.medium {
+  color: #db6212;
+}
+
+.high {
+  color: #db1912;
+}

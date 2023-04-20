@@ -21,21 +21,21 @@
             <h2>Calculadora de IMC</h2>
             <form id="imc-form">
                 <div class="form-inputs">
-                <div class="form-control">
-                    <label for="name">Insira seu nome:</label>
-                    <input type="text" name="name" id="name" placeholder="Exemplo Victor" required />
-                </div>
-                <div class="form-control">
-                    <label for="age">Digite sua idade:</label>
-                    <input type="text" name="age" id="age" placeholder="Exemplo 27" required />
-                </div>
                     <div class="form-control">
-                        <label for="height">Altura:</label>
-                        <input type="text" name="height" id="height" placeholder="Exemplo 1,75" required />
+                        <input type="text" name="name" id="name" placeholder="Exemplo Victor" required />
+                        <label class="label" for="name">Insira seu nome:</label>
                     </div>
                     <div class="form-control">
-                        <label for="weight">Peso:</label>
-                        <input type="text" name="weight" id="weight" placeholder="Exemplo 70,5" />
+                        <input type="text" name="age" id="age" placeholder="Exemplo 27" required />
+                        <label class="label for=" age">Digite sua idade:</label>
+                    </div>
+                    <div class="form-control">
+                        <input type="text" name="height" id="height" placeholder="Exemplo 1,75" required />
+                        <label class="label for=" height">Altura:</label>
+                    </div>
+                    <div class="form-control">
+                        <input type="text" name="weight" id="weight" placeholder="Exemplo 70,5" required />
+                        <label class="label for=" weight">Peso:</label>
                     </div>
                 </div>
                 <div class="action-control">
@@ -45,17 +45,24 @@
             </form>
         </div>
         <div id="result-container" class="hide">
+            <p id="name-info">Olá, <span></span></p>
+            <p id="age-info">sua idade atual é <span></span> anos</p>
+            <p id="imc-number">Seu IMC: <span></span></p>
+            <p id="imc-info">Situação atual: <span></span></p>
+            <h3>Confira as classificações</h3>
             <div id="imc-table">
                 <div class="table-header">
-                    <p id="name-info">Olá, <span></span></p>
-                    <p id="age-info">sua idade atual é <span></span> anos</p>
-                    <p id="imc-number">Seu IMC: <span></span></p>
-                    <p id="imc-info">Situação atual: <span></span></p>
+                    <h4>IMC</h4>
+                    <h4>Classificação</h4>
+                    <h4>Obesidade</h4>
                 </div>
             </div>
             <button id="back-btn">Voltar</button>
         </div>
     </div>
+    <footer>
+        <p>2023 © Desenvolvido por Victor Almeida</p>
+    </footer>
 </body>
 
 </html>

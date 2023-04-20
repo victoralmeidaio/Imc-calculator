@@ -6,13 +6,10 @@
 }
 
 body {
-  background-image: url(/img/pexels-sohail-nachiti-807598.jpg);
-  background-position: center;
-  background-size: cover;
-  background-repeat: repeat;
-  backdrop-filter: blur(3.5px);
 
+background: linear-gradient(180deg, #8000FF 0%, #00DDDE 100%);
   display: flex;
+  flex-direction: column;
   justify-content: center;
   align-items: center;
   min-height: 100vh;
@@ -24,12 +21,13 @@ body {
 }
 
 .container {
-  min-width: 400px;
+  width: 380px;
   min-height: 400px;
   padding: 2rem;
   background: rgba(217, 217, 217, 0.24);
   backdrop-filter: blur(2.5px);
   border-radius: 2em;
+  border: 1px solid #cccccc6c;
 }
 
 /* IMC Form */
@@ -56,31 +54,40 @@ body {
   position: relative;
 }
 
-.form-control label {
+.form-control .label {
   font-weight: bold;
   color: #ffffff;
   position: absolute;
-  bottom: 10%;
-  transition: all 0.5s ease-in-out;
+  left: 0;
+  bottom: 0;
+
+  transition: all 0.2s ease;
+  pointer-events: none;
 }
 
-
-.form-control input {
-  padding: 1rem 0.5rem;
+.form-control input[type="text"] {
+  margin-top: 2em;
   background-color: transparent;
-  border-style: none;
+  border: none;
   border-bottom: 1px solid #ccc;
   color: white;
-  outline: 0;
-  transition: border-color 0.2s;
-
-}
-
-input:focus {
   outline: none;
-  color: white;
 
 }
+
+.form-control input[type="text"]:focus~.label,
+.form-control input[type="text"]:valid~.label {
+  top: -0.5em;
+  color: #ccc;
+}
+
+
+::placeholder {
+  display: none !important;
+  color: transparent;
+
+}
+
 
 .action-control {
   display: flex;
@@ -89,10 +96,6 @@ input:focus {
   gap: 1rem;
 }
 
-::placeholder {
-  color: transparent;
-
-}
 
 button {
   text-transform: uppercase;
@@ -128,11 +131,13 @@ button:hover {
   font-size: 1.4rem;
   color: #fff;
 }
-#name-info{
+
+#name-info {
   font-size: 2em;
   margin-bottom: 0.2em;
 }
-#age-info{
+
+#age-info {
   font-size: 1.6em;
   margin-bottom: 0.5em;
 }
@@ -160,16 +165,19 @@ button:hover {
 .table-header,
 .table-data {
   display: flex;
-  flex-direction: column;
   margin-bottom: 0.5rem;
   padding-bottom: 0.5rem;
   border-bottom: 1px solid #ffffff;
   text-align: center;
+  justify-content: center;
 }
 
 .table-header h4,
 .table-data p {
   flex: 1;
+}
+.table-data p{
+  font-size: 1em;
 }
 
 .table-header h4:nth-child(3),
@@ -195,4 +203,19 @@ button:hover {
 
 .high {
   color: #db1912;
+}
+footer{
+  font-size: 0.8em;
+  color: ghostwhite;
+  margin-top: 1em;
+}
+
+/* Responsive*/
+@media (min-width:320px) {
+
+  .container {
+    max-width: 300px;
+    margin-left: 1em;
+    margin-right: 1em;
+  }
 }

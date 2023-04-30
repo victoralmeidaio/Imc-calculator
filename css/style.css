@@ -7,13 +7,14 @@
 
 body {
 
-background: linear-gradient(180deg, #8000FF 0%, #00DDDE 100%);
+  background: linear-gradient(180deg, #8000FF 0%, #00DDDE 100%);
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
   min-height: 100vh;
   color: #fff;
+
 }
 
 .hide {
@@ -22,7 +23,7 @@ background: linear-gradient(180deg, #8000FF 0%, #00DDDE 100%);
 
 .container {
   width: 380px;
-  min-height: 400px;
+  min-height: 425px;
   padding: 2rem;
   background: rgba(217, 217, 217, 0.24);
   backdrop-filter: blur(2.5px);
@@ -56,6 +57,7 @@ background: linear-gradient(180deg, #8000FF 0%, #00DDDE 100%);
 
 .form-control .label {
   font-weight: bold;
+
   color: #ffffff;
   position: absolute;
   left: 0;
@@ -72,6 +74,7 @@ background: linear-gradient(180deg, #8000FF 0%, #00DDDE 100%);
   border-bottom: 1px solid #ccc;
   color: white;
   outline: none;
+  font-size: 1em;
 
 }
 
@@ -79,6 +82,8 @@ background: linear-gradient(180deg, #8000FF 0%, #00DDDE 100%);
 .form-control input[type="text"]:valid~.label {
   top: -0.5em;
   color: #ccc;
+  font-size: 0.9em;
+  outline: none;
 }
 
 
@@ -177,7 +182,8 @@ button:hover {
 .table-data p {
   flex: 1;
 }
-.table-data p{
+
+.table-data p {
   font-size: 1em;
 }
 
@@ -205,18 +211,25 @@ button:hover {
 .high {
   color: #db1912;
 }
-footer{
+
+footer {
   font-size: 0.8em;
   color: ghostwhite;
   margin-top: 1em;
 }
 
 /* Responsive*/
+@media (max-width:425px) {
+  .container {
+    max-width: 100%;
+
+  }
+}
+
 @media (min-width:320px) {
 
   .container {
-    max-width: 300px;
-    margin-left: 1em;
-    margin-right: 1em;
+    max-width: 100%;
+
   }
 }
